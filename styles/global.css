@@ -1,0 +1,24 @@
+/* General styles */
+li.relative {
+    position: relative; /* This is important for absolute positioning in desktop view */
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    #dropdownNavbar {
+      position: static; /* Keeps the dropdown in the normal flow for mobile view */
+      width: 100%; /* Full width inside the navbar */
+    }
+  }
+  
+  /* Desktop View */
+  @media (min-width: 768px) {
+    #dropdownNavbar {
+      position: absolute; /* Makes it overlay below the button in desktop view */
+      left: 0;
+      top: 100%; /* Positions dropdown just below the parent */
+      margin-top: 0.5rem; /* Space between button and dropdown */
+      z-index: 10;
+      width: 11rem; /* Adjust dropdown width */
+    }
+  }
