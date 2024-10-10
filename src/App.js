@@ -1,16 +1,25 @@
 // App.js
 import React from 'react';
-import Nav from './components/nav'; // Import Nav component
+import Nav from './components/nav';
+import Services from './components/services';
+import Main from './components/main';
+import Pricing from './components/pricing';
+import Contact from './components/contact';
+
+
+
+
 import './index.css';
 
 function App() {
   return (
-    <div className="App">
-       <Nav /> 
-      <div className="text-center bg-red-50" style={{ color: 'green' }}>
-        Nav Bar
-      </div>
-    </div>
+    <>
+      <Nav />
+      <Main />
+      <Services />
+      <Pricing />
+      <Contact />
+    </>
   );
 }
 

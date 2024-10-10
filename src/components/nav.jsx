@@ -14,7 +14,7 @@ const Nav = () => {
             alt="Flowbite Logo"
           />
           <span className="self-center text-2xl font-semibold text-white">
-            Flowbites
+            PaulMc
           </span>
         </a>
         <button
@@ -120,7 +120,7 @@ const Nav = () => {
 
             <li>
               <a
-                href="#"
+                href="#services"
                 className="block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0"
               >
                 Services
@@ -128,7 +128,7 @@ const Nav = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="#pricing"
                 className="block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0"
               >
                 Pricing
@@ -136,7 +136,7 @@ const Nav = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="#contact"
                 className="block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0"
               >
                 Contact
