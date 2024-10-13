@@ -1,8 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Close dropdown if click happens outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [dropdownRef]);
 
   return (
     <nav className="bg-gray-900 border-gray-700">
@@ -53,71 +68,74 @@ const Nav = () => {
               </a>
             </li>
             <li className="md:relative">
-  <button
-    className="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto"
-    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-  >
-    Dropdown
-    <svg
-      className="w-2.5 h-2.5 ms-2.5"
-      aria-hidden="true"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 10 6"
-    >
-      <path
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="m1 1 4 4 4-4"
-      />
-    </svg>
-  </button>
-  <div
-    className={`${
-      isDropdownOpen ? '' : 'hidden'
-    } md:absolute md:left-0 md:top-full md:mt-2 z-10 w-full md:w-44 bg-gray-700 divide-y divide-gray-600 rounded-lg shadow md:shadow-none md:rounded-none`}
-    id="dropdownNavbar"
-  >
-    <ul className="py-2 text-sm text-gray-400">
-      <li>
-        <a
-          href="#"
-          className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
-        >
-          Dashboard
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
-        >
-          Settings
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
-        >
-          Earnings
-        </a>
-      </li>
-    </ul>
-    <div className="py-1">
-      <a
-        href="#"
-        className="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
-      >
-        Sign out
-      </a>
-    </div>
-  </div>
-</li>
-
-
+              <button
+                className="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              >
+                Dropdown
+                <svg
+                  className="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+              <div
+                ref={dropdownRef}
+                className={`${
+                  isDropdownOpen ? '' : 'hidden'
+                } md:absolute md:left-0 md:top-full md:mt-2 z-10 w-full md:w-44 bg-gray-700 divide-y divide-gray-600 rounded-lg shadow md:shadow-none md:rounded-none`}
+                id="dropdownNavbar"
+              >
+                <ul className="py-2 text-sm text-gray-400">
+                  <li>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
+                      onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
+                    >
+                      Dashboard
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
+                      onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
+                    >
+                      Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
+                      onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
+                    >
+                      Earnings
+                    </a>
+                  </li>
+                </ul>
+                <div className="py-1">
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white"
+                    onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
+                  >
+                    Sign out
+                  </a>
+                </div>
+              </div>
+            </li>
             <li>
               <a
                 href="#services"

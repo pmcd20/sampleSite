@@ -5,6 +5,8 @@ import Services from './components/services';
 import Main from './components/main';
 import Pricing from './components/pricing';
 import Contact from './components/contact';
+import Footer from './components/footer';
+
 
 
 
@@ -19,6 +21,7 @@ function App() {
       <Services />
       <Pricing />
       <Contact />
+      <Footer/>
     </>
   );
 }
