@@ -70,7 +70,10 @@ const Nav = () => {
             <li className="md:relative">
               <button
                 className="flex items-center justify-between w-full py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto"
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                onClick={(e) => {
+                  e.stopPropagation(); // Prevent event bubbling
+                  setIsDropdownOpen(!isDropdownOpen); // Toggle dropdown state
+                }}
               >
                 Dropdown
                 <svg
@@ -91,9 +94,8 @@ const Nav = () => {
               </button>
               <div
                 ref={dropdownRef}
-                className={`${
-                  isDropdownOpen ? '' : 'hidden'
-                } md:absolute md:left-0 md:top-full md:mt-2 z-10 w-full md:w-44 bg-gray-700 divide-y divide-gray-600 rounded-lg shadow md:shadow-none md:rounded-none`}
+                className={`${isDropdownOpen ? '' : 'hidden'
+                  } md:absolute md:left-0 md:top-full md:mt-2 z-10 w-full md:w-44 bg-gray-700 divide-y divide-gray-600 rounded-lg shadow md:shadow-none md:rounded-none`}
                 id="dropdownNavbar"
               >
                 <ul className="py-2 text-sm text-gray-400">
