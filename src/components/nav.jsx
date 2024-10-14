@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,12 +61,12 @@ const Nav = () => {
         >
           <ul className="flex flex-col font-medium p-4 mt-4 border border-gray-700 rounded-lg bg-gray-800 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-gray-900">
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-white bg-blue-600 rounded md:bg-transparent md:text-blue-500 md:p-0"
+              <Link to="/"
+
+                className="block py-2 px-3 text-white bg-blue-600 rounded md:bg-transparent md:hover:text-blue-500 md:p-0"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="md:relative">
               <button
@@ -109,13 +110,13 @@ const Nav = () => {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/settings"
                       className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
                       onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
                     >
                       Settings
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a
@@ -139,28 +140,27 @@ const Nav = () => {
               </div>
             </li>
             <li>
-              <a
-                href="#services"
+              <Link to="/#services"
                 className="block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0"
               >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#pricing"
+              <Link
+                to="/#pricing"
                 className="block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0"
               >
                 Pricing
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#contact"
+              <Link
+                to="/#contact"
                 className="block py-2 px-3 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
