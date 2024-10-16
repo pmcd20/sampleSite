@@ -5,9 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // backgroundImage: theme => ({
-      //   'architect': "url('/content/bg_planning.jpg')",
-      // })
+      backgroundImage: theme => ({
+        'architect': "url('/public/content/bg_planning.jpg')",
+      })
     },
   },
 }
