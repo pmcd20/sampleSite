@@ -7,3 +7,12 @@ html {
   scroll-behavior: smooth;
   font-family: "Roboto", "sans-serif";
 }
+
+@layer base {
+  h1 {
+    @apply text-4xl p-4; /* Apply Tailwind classes for h1 */
+  }
+  p {
+    @apply text-base p-2; /* Apply Tailwind classes for p */
+  }
+}
