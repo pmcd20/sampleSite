@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         'architect': "url('/public/content/bg_planning.jpg')",
+        'group-discussion': "url('/public/content/pexels-cottonbro-3205567.jpg')",
+
       })
     },
   },
