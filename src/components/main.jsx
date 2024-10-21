@@ -10,7 +10,7 @@ const Main = () => {
             <div className="absolute inset-0 bg-black bg-opacity-25"></div>
 
 
-            <section className="relative flex flex-row gap-4 bg-white bg-opacity-70  mb-4 mx-4 md:mx-10 mt-[80px]  max-w-[1200px] border-4 border-gray-500 rounded-lg shadow-lg outline outline-2 outline-gray-300">
+            <section className="relative flex flex-row gap-4 bg-white bg-opacity-70  mb-4 mx-4 md:mx-10 mt-[80px]  bg-table-plan max-w-[1200px] border-4 border-gray-500 rounded-lg shadow-lg outline outline-2 outline-gray-300">
                 <div className="flex-grow w-full max-w-[500px] min-w-[450px] my-3 ml-3 hidden sm:block ">
                     <img src="https://st2.depositphotos.com/3695509/5259/i/950/depositphotos_52596411-stock-photo-architect-in-office.jpg" alt="Architect in office" className="w-full h-auto object-cover border-4  border-gray-200 outline outline-1 " />
                 </div>
