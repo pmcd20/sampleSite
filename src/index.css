@@ -3,10 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: "Roboto", "sans-serif";
-  background-color: rgba(237, 244, 249, 0.749);
+  /* background-color: rgba(237, 244, 249, 0.749); */
+  background-color: #e3e2df;
 }
 
 @layer base {
