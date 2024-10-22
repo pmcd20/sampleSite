@@ -13,7 +13,7 @@ const Services = () => {
                     <a href="#" className="block transform transition-transform duration-300 hover:scale-105">
                         <div className=" relative p-6 rounded-lg  shadow-md hover:shadow-2xl  flex flex-col justify-between bg-group-discussion  bg-no-repeat bg-cover bg-bottom  md:min-h[250px]  lg:min-h-[450px] ">
 
-                            <div className="absolute inset-0 bg-red-400  opacity-75 rounded-lg"></div>
+                            <div className="absolute inset-0 bg-[#76182d] opacity-75 rounded-lg"></div>
 
 
 
@@ -33,7 +33,7 @@ const Services = () => {
                     <a href="#" className="block transform transition-transform duration-300 hover:scale-105">
                         <div className=" relative p-6 rounded-lg shadow-md hover:shadow-2xl flex flex-col justify-between bg-table-plan  bg-no-repeat bg-cover bg-bottom md:min-h-[250px] lg:min-h-[450px] ">
 
-                            <div className="absolute inset-0 bg-yellow-400  opacity-75 rounded-lg"></div>
+                            <div className="absolute inset-0 bg-[#7c7034]  opacity-75 rounded-lg"></div>
 
 
 
@@ -54,7 +54,7 @@ const Services = () => {
                     <a href="#" className="block transform transition-transform duration-300 hover:scale-105">
                         <div className=" relative p-6 rounded-lg shadow-md hover:shadow-2xl flex flex-col justify-between bg-person-computer  bg-no-repeat bg-cover bg-bottom md:min-h-[250px] lg:min-h-[450px] ">
 
-                            <div className="absolute inset-0 bg-blue-400  opacity-75 rounded-lg"></div>
+                            <div className="absolute inset-0 bg-[#276a89] opacity-75 rounded-lg"></div>
 
 
 
@@ -74,7 +74,7 @@ const Services = () => {
                     <a href="#" className="block transform transition-transform duration-300 hover:scale-105">
                         <div className=" relative p-6 rounded-lg shadow-md hover:shadow-2xl flex flex-col justify-between bg-saw-sparks  bg-no-repeat bg-cover bg-bottom md:min-h-[250px] lg:min-h-[450px] ">
 
-                            <div className="absolute inset-0 bg-green-400  opacity-75 rounded-lg"></div>
+                            <div className="absolute inset-0 bg-[#a78d8a]  opacity-75 rounded-lg"></div>
 
 
 
