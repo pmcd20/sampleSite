@@ -11,17 +11,11 @@ module.exports = {
         'table-plan': "url('/public/content/pexels-jeshoots-com-147458-834892.jpg')",
         'person-computer': "url('/public/content/pexels-karolina-grabowska-4491459.jpg')",
         'saw-sparks': "url('/public/content/pexels-rezwan-1145434.jpg')",
-        'wood-rings': "url('/public/content/pexels-fwstudio-33348-129722.jpg')",
-
-
-
-
-
-
-
-
-
-      })
+        'wood-rings': "url('/public/content/pexels-fwstudio-33348-129722.jpg')"
+      }),
+      colors: {
+        contact: '#463232fc',
+      },
     },
   },
 }
