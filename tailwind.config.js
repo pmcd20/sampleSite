@@ -14,7 +14,8 @@ module.exports = {
         'wood-rings': "url('/public/content/pexels-fwstudio-33348-129722.jpg')"
       }),
       colors: {
-        contact: '#463232fc',
+        contact22: '#463232fc',
+        contact: '#221812',
       },
     },
   },
