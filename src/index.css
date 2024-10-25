@@ -3,7 +3,25 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 2px red solid; */
+}
+
 html {
   scroll-behavior: smooth;
   font-family: "Roboto", "sans-serif";
+  /* background-color: rgba(237, 244, 249, 0.749); */
+  background-color: #e3e2df;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl p-4; /* Apply Tailwind classes for h1 */
+  }
+  p {
+    @apply text-base p-2; /* Apply Tailwind classes for p */
+  }
 }

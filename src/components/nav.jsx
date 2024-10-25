@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); // New state to track scrolling
   const dropdownRef = useRef(null);
+
 
   // Close dropdown if click happens outside
   useEffect(() => {
@@ -20,8 +22,25 @@ const Nav = () => {
     };
   }, [dropdownRef]);
 
+  // Detect scroll position to change navbar background
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) { // Change this value to determine when the background should change
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="bg-gray-900 border-gray-700">
+    <nav
+      className={` bg-gray-900 md:${isScrolled ? 'bg-gray-900' : 'bg-transparent'} fixed top-0 left-0 w-full z-50 transition-all duration-300`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
@@ -59,7 +78,11 @@ const Nav = () => {
           className={`${isMenuOpen ? '' : 'hidden'} w-full md:block md:w-auto`}
           id="navbar-dropdown"
         >
-          <ul className="flex flex-col font-medium p-4 mt-4 border border-gray-700 rounded-lg bg-gray-800 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-gray-900">
+          <ul
+            className={`flex flex-col font-medium p-4 mt-4 border border-gray-700 rounded-lg
+              md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 `}
+          >
+
             <li>
               <Link to="/"
 
